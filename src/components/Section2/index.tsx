@@ -3,18 +3,14 @@
 import { useEffect } from 'react'
 import Image from 'next/image'
 
-
-
 export default function Section2() {
-
-    useEffect(() => {
+  useEffect(() => {
     const formContainer = document.getElementById('section-2-form')
     if (!formContainer) return
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Cria o script inline
           const scriptInline = document.createElement('script')
           scriptInline.defer = true
           scriptInline.textContent = `
@@ -36,7 +32,6 @@ export default function Section2() {
             }(window,0,"amo_forms_","params","load","loaded");
           `
 
-          // Script externo
           const scriptSrc = document.createElement('script')
           scriptSrc.async = true
           scriptSrc.charset = 'utf-8'
@@ -55,37 +50,35 @@ export default function Section2() {
     return () => observer.disconnect()
   }, [])
 
-
   return (
     <section
       id="section-2"
-      className="flex flex-wrap justify-center items-center w-full bg-black px-10 py-28 gap-y-5"
+      className="flex flex-col lg:flex-row justify-center items-center w-full bg-black px-6 md:px-10 py-20 gap-10"
     >
-      {/* Bloco de etapas */}
-      <div className="flex flex-col justify-center items-center w-full max-w-xl mr-20 text-white">
-        {/* Título */}
-        <div className="text-center text-[0.9em] mb-8">
+      {/* Etapas */}
+      <div className="flex flex-col justify-center items-center w-full max-w-2xl text-white space-y-8">
+        <div className="text-center">
           <h2 className="text-xl md:text-2xl font-semibold">
             Dê o próximo passo para estruturar seu marketing em menos de um minuto
           </h2>
-          <hr className="h-[3px] w-full mt-4 mb-8 bg-[#CA1A41] border-none" />
+          <hr className="h-[3px] w-40 mx-auto mt-4 bg-[#CA1A41] border-none" />
         </div>
 
         {/* Etapa 1 */}
-        <div className="flex flex-row items-center justify-center bg-[#21244D] rounded-[10px] w-full max-w-2xl h-[17em] gap-8 px-6 relative">
-          <figure className="h-20">
+        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-[15em] p-6 gap-6">
+          <figure className="h-20 w-20">
             <Image
               src="/form-icon1.webp"
-              alt="Ícone de formulário em prancheta"
+              alt="Ícone de formulário"
               width={80}
               height={80}
-              className="object-contain h-full"
+              className="object-contain h-full w-full"
               loading="lazy"
             />
           </figure>
-          <div className="text-left">
-            <h3 className="text-3xl font-bold mb-2 flex justify-end">1</h3>
-            <h2 className="text-xl font-semibold">Preencha o formulário</h2>
+          <div className="text-left w-full">
+            <h3 className="text-2xl font-bold mb-1 flex justify-end">1</h3>
+            <h2 className="text-lg font-semibold">Preencha o formulário</h2>
             <p className="text-sm mt-1">
               Envie suas informações de contato. Todos os seus dados <br />
               estarão seguros, vamos cuidar bem deles.
@@ -94,46 +87,45 @@ export default function Section2() {
         </div>
 
         {/* Seta */}
-        <figure className="w-[20em]">
+        <figure className="w-full max-w-sm px-6">
           <Image
             src="/Linha.webp"
-            alt="Seta indicando a próxima etapa"
+            alt="Seta"
             width={320}
             height={40}
-            loading="lazy"
             className="object-contain w-full"
+            loading="lazy"
           />
         </figure>
 
         {/* Etapa 2 */}
-        <div className="flex flex-row items-center justify-center bg-[#21244D] rounded-[10px] w-full max-w-2xl h-[17em] gap-8 px-6 relative">
+        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-[15em] p-6 gap-6">
           <div className="text-left">
-            <h3 className="text-3xl font-bold mb-2">2</h3>
-            <h2 className="text-xl font-semibold">Receba uma ligação</h2>
+            <h3 className="text-2xl font-bold mb-1">2</h3>
+            <h2 className="text-lg font-semibold">Receba uma ligação</h2>
             <p className="text-sm mt-1">
               De quem entende seu desafio e sabe como destravar <br />
-              resultados com estratégia e execução. Mais que um papo <br />
-              — é o início de uma nova fase para sua empresa.
+              resultados com estratégia e execução. Mais que um papo — <br />
+              é o início de uma nova fase para sua empresa.
             </p>
           </div>
-          <figure className="h-20">
+          <figure className="h-20 w-20">
             <Image
               src="/form-icon2.webp"
               alt="Ícone de telefone"
-              width={80}
+              width={70}
               height={80}
-              className="object-contain h-full"
+              className="object-contain h-full w-full"
               loading="lazy"
             />
           </figure>
         </div>
       </div>
 
-      {/* Placeholder do formulário */}
+      {/* Formulário */}
       <div
         id="section-2-form"
-        className="flex flex-col items-center justify-center w-full max-w-[560px] p-[50px_40px] bg-[#21244D] rounded-[10px] flex-1 h-auto"
-
+        className="w-full max-w-[560px] bg-[#21244D] rounded-[10px] px-8 py-10"
       >
         <noscript>Para visualizar o formulário, ative o JavaScript no seu navegador.</noscript>
       </div>

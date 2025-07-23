@@ -63,31 +63,33 @@ const clientes = [
     branco: "/empresas/unioss-branco.svg",
     colorido: "/empresas/unioss-colorida.svg",
   },
-  
 ];
 
 export default function SectionCustomers() {
   return (
-    <section id="section-customers" className="w-full bg-[#0C0014] py-20 px-4 text-center flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold text-white mb-4 w-[9em] border-b-3 border-solid border-[#CA1A41]">
+    <section
+      id="section-customers"
+      className="w-full bg-[#0C0014] py-20 px-4 text-center flex flex-col items-center justify-center"
+    >
+      <h1 className="text-3xl font-bold text-white mb-4 border-b-4 border-[#CA1A41] pb-1">
         Clientes Tegbe
       </h1>
       <p className="text-white text-lg mb-10">
         Parceiros que transformaram o digital em lucro.
       </p>
 
-      <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-7xl w-full">
         {clientes.map((cliente, index) => (
           <div
             key={index}
-            className="w-[200px] h-[100px] flex items-center justify-center p-[10px] group"
+            className="flex items-center justify-center p-3 group w-full h-24"
           >
             <Image
               src={cliente.branco}
               alt={`Logo branca ${cliente.nome}`}
               width={200}
               height={100}
-              className="block group-hover:hidden"
+              className="block group-hover:hidden object-contain"
               loading="lazy"
             />
             <Image
@@ -95,24 +97,12 @@ export default function SectionCustomers() {
               alt={`Logo colorida ${cliente.nome}`}
               width={200}
               height={100}
-              className="hidden group-hover:block"
+              className="hidden group-hover:block object-contain"
               loading="lazy"
             />
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .customer {
-          position: relative;
-        }
-        .customer:hover .svg-branco {
-          opacity: 0;
-        }
-        .customer:hover .svg-colorido {
-          opacity: 1;
-        }
-      `}</style>
     </section>
   );
 }

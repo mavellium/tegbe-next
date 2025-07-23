@@ -4,44 +4,34 @@ export default function SectionTextImage() {
       id="section-text-image"
       className="pt-20 px-4 bg-gradient-to-b from-black to-[#0C0014]"
     >
-      <div className="flex flex-wrap items-center justify-center gap-[clamp(30px,5vw,80px)] max-w-[1300px] w-full mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-[1300px] w-full mx-auto">
         {/* Bloco de vídeo */}
-        <figure className="w-full h-[400px] flex-1 flex items-center justify-center">
+        <figure className="w-full max-w-[644px] aspect-video flex items-center justify-center rounded-[10px] overflow-hidden">
           <div
             id="yt-placeholder-main"
-            style={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '644px',
-              height: '100%',
-              cursor: 'pointer',
-            }}
+            className="relative w-full h-full cursor-pointer"
           >
             <img
               src="https://img.youtube.com/vi/1MIjs_OA-Uc/maxresdefault.jpg"
               alt="Assista o vídeo"
-              className="w-full h-full object-cover rounded-[10px]"
+              className="w-full h-full object-cover"
             />
             <div
+              className="absolute top-1/2 left-1/2 w-16 h-16 bg-center bg-no-repeat bg-contain pointer-events-none"
               style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
+                backgroundImage: `url('https://cdn-icons-png.flaticon.com/512/727/727245.png')`,
                 transform: 'translate(-50%, -50%)',
-                width: '64px',
-                height: '64px',
-                background: `url('https://cdn-icons-png.flaticon.com/512/727/727245.png') no-repeat center center`,
-                backgroundSize: 'contain',
-                pointerEvents: 'none',
               }}
             />
           </div>
         </figure>
 
-        {/* Texto à direita */}
-        <div className="flex-1 text-[#F0F0F0]">
-          <h2 className="text-[32px] font-semibold mb-10">Por que seu Investimento não traz retorno?</h2>
-          <p className="text-[18px] font-medium leading-[30px] text-justify">
+        {/* Texto */}
+        <div className="text-[#F0F0F0] max-w-[600px]">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-10 text-center lg:text-left">
+            Por que seu Investimento não traz retorno?
+          </h2>
+          <p className="text-base md:text-lg leading-[1.8] text-justify">
             Estudos mostram que muitas pequenas e médias empresas falham no digital — não por falta de investimento,
             mas por focar em <span className="font-bold">métricas de vaidade</span> (curtidas, alcance)
             e negligenciar uma estratégia de <span className="font-bold">vendas real.</span>
