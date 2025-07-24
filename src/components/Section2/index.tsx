@@ -61,7 +61,7 @@ export default function Section2() {
           <h2 className="text-xl md:text-2xl font-semibold">
             Dê o próximo passo para estruturar seu marketing em menos de um minuto
           </h2>
-          <hr className="h-[3px] w-40 mx-auto mt-4 bg-[#CA1A41] border-none" />
+          <hr className="h-[3px] w-full mx-auto mt-4 border-b-4 border-[#CA1A41]" />
         </div>
 
         {/* Etapa 1 */}

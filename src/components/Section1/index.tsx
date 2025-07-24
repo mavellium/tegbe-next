@@ -37,23 +37,19 @@ export default function Section1() {
 
       {/* Conteúdo sobreposto */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full w-full px-4">
-        <div className="flex flex-col items-center justify-center max-w-4xl">
+        <div className="flex flex-col items-center justify-center text-center max-w-[1200px]">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 max-w-[30em] w-full">
-            Estruture o marketing e as vendas da sua empresa <br />
-            <span className="">com soluções estratégicas sob medida</span>
+            Estruture o marketing e as vendas da sua empresa
+            <span>com soluções estratégicas sob medida</span>
           </h1>
 
-          <div className="text-base sm:text-lg md:text-xl space-y-2 mb-8 px-2">
-            <p>
-              Chega de Investir em Marketing sem ver Resultados. Somos a{' '}
-              <span className="font-bold">Agência</span> que
-            </p>
-            <p>
-              foca em <span className="font-bold">Vendas</span>,{' '}
+          <div className="text-base sm:text-lg md:text-xl mb-8 px-2 w-full">
+              <p>Chega de Investir em Marketing sem ver Resultados. Somos a{' '}
+              <span className="font-bold">Agência</span> que</p>
+              <p>foca em <span className="font-bold">Vendas</span>,{' '}
               <span className="font-bold">Estrutura</span> e{' '}
               <span className="font-bold">Escala</span>,{' '}
-              <span className="font-bold">Sem Enrolação</span>.
-            </p>
+              <span className="font-bold">Sem Enrolação</span>.</p>
           </div>
 
           <div className="w-full flex justify-center">
