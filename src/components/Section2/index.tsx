@@ -65,7 +65,7 @@ export default function Section2() {
         </div>
 
         {/* Etapa 1 */}
-        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-[15em] p-6 gap-6">
+        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-full p-6 gap-6">
           <figure className="h-20 w-20">
             <Image
               src="/form-icon1.webp"
@@ -99,7 +99,7 @@ export default function Section2() {
         </figure>
 
         {/* Etapa 2 */}
-        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-[15em] p-6 gap-6">
+        <div className="flex flex-col sm:flex-row items-center bg-[#21244D] rounded-[10px] h-full p-6 gap-6">
           <div className="text-left">
             <h3 className="text-2xl font-bold mb-1">2</h3>
             <h2 className="text-lg font-semibold">Receba uma ligação</h2>
@@ -125,7 +125,7 @@ export default function Section2() {
       {/* Formulário */}
       <div
         id="section-2-form"
-        className="w-full max-w-[560px] bg-[#21244D] rounded-[10px] px-8 py-10"
+        className="w-full max-w-[560px] bg-[#21244D] rounded-[10px] px-3 sm:px-8 py-4 sm:py-10 h-full"
       >
         <noscript>Para visualizar o formulário, ative o JavaScript no seu navegador.</noscript>
       </div>
