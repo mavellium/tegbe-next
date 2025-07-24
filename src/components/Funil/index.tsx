@@ -22,7 +22,7 @@ export default function SectionFunil() {
 
         {/* Texto */}
         <div className="w-full max-w-[600px] text-start text-base leading-relaxed">
-          <h2 className="md:text-2xl md:text-center sm:text-center sm:text-2xl">
+          <h2 className="text-center sm:text-start text-[25px]">
             O objetivo principal do modelo <br />
             Flywheel é <span className="font-bold">construir audiência</span><br />
             com conteúdo,<br />

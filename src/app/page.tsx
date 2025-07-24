@@ -9,6 +9,8 @@ import Section5 from "@/components/Section5";
 import Section6 from "@/components/Section6";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer/Index";
+import Assessments from "@/components/Assessments";
+import SectionStrategic from "@/components/SectionStrategic";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
         <Section2></Section2>
         <Section3></Section3>
         <Funil></Funil>
+        <SectionStrategic></SectionStrategic>
+        <Assessments></Assessments>
         <Costumers></Costumers>
         <Section4></Section4>
         <Section5></Section5>

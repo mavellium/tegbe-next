@@ -6,7 +6,7 @@ export default function Section5() {
             </h1>
             <div>
                 <div className="flex flex-col items-center justify-center gap-8 w-full text-start font-bold text-xl">
-                    <div className="flex flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
+                    <div className="flex flex-col sm:flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
                     <div className="p-12">
                         <img
                         src="/Selo-Consultoria-Mercado-Livre.svg"
@@ -14,12 +14,12 @@ export default function Section5() {
                         loading="lazy"
                         />
                     </div>
-                    <h2 className="pr-12">
+                    <h2 className="pb-5 sm:pr-12 text-center sm:text-start">
                         Somos consultores oficiais do Mercado Livre
                     </h2>
                     </div>
 
-                    <div className="flex flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
+                    <div className="flex flex-col sm:flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
                     <div className="p-12">
                         <img
                         src="/Kommo-icon.svg"
@@ -27,12 +27,12 @@ export default function Section5() {
                         loading="lazy"
                         />
                     </div>
-                    <h2 className="pr-12">
+                    <h2 className="pb-5 sm:pr-12 text-center sm:text-start">
                         Especialistas em CRM Kommo e automações que geram vendas.
                     </h2>
                     </div>
 
-                    <div className="flex flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
+                    <div className="flex flex-col sm:flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
                     <div className="p-12">
                         <img
                         src="/Alvo-icon.webp"
@@ -40,12 +40,12 @@ export default function Section5() {
                         loading="lazy"
                         />
                     </div>
-                    <h2 className="pr-12">
+                    <h2 className="pb-5 sm:pr-12 text-center sm:text-start">
                         Criamos um método próprio de captação e conversão digital.
                     </h2>
                     </div>
 
-                    <div className="flex flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
+                    <div className="flex flex-col sm:flex-row items-center w-full h-full text-white rounded-[10px] bg-[var(--dark-blue)]">
                     <div className="p-12">
                         <img
                         src="/Clientes-icon.webp"
@@ -53,7 +53,7 @@ export default function Section5() {
                         loading="lazy"
                         />
                     </div>
-                    <h2 className="pr-12">
+                    <h2 className="pb-5 sm:pr-12 text-center sm:text-start">
                         Atendemos clínicas, e-commerces, empresas locais e negócios que precisam de vendas reais.
                     </h2>
                     </div>

@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function Section1() {
   return (
     <section id="section-1" className="relative w-full h-screen overflow-hidden">
+      <div className="video-overlay"></div>
       {/* Vídeo para desktop */}
       <div className="absolute inset-0 z-0">
         <video

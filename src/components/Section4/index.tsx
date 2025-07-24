@@ -3,14 +3,14 @@ import { Link } from "lucide-react";
 export default function SectionLoseClient() {
   return (
     <section
-      className="flex flex-row flex-wrap justify-center items-center gap-[120px] py-[5em] px-[2em] w-full bg-[#CA1A41] text-white text-center"
+      className="flex flex-row flex-wrap justify-center items-center gap-[40px] lg:gap-[120px] py-[5em] px-[2em] w-full bg-[#CA1A41] text-white text-center"
     >
       <div id="lose-client-container" className="w-[30em]">
         <div id="lose-client-content" className="text-start">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#EEC35A]">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#EEC35A] text-center lg:text-start">
             Chega de perder clientes
           </h1>
-          <p className="text-lg md:text-xl font-medium leading-relaxed flex-wrap mt-8">
+          <p className="text-lg md:text-xl font-medium leading-relaxed flex-wrap mt-8 text-center lg:text-start">
             Veja como a <strong className="text-white">TegBe</strong> transforma presença digital em{" "}
             <strong className="text-white">lucro de verdade</strong>.
           </p>
