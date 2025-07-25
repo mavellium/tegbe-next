@@ -19,7 +19,7 @@ export default function Header() {
       className={`fixed top-0 z-[10000000] w-full h-20 flex items-center border-b-4 border-black transition-colors ${
         scrolled ? "bg-black" : "bg-[#0b0c11bd]"
       }`}>
-      <div className="flex items-center justify-between w-full px-4 md:px-8 lg:px-20 sm:justify-center lg:justify-between">
+      <div className="flex items-center justify-center w-full px-4 md:px-8 lg:px-20 lg:justify-between">
         {/* Logo */}
         <a href="#section-1">
           <Image

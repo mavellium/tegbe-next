@@ -14,16 +14,18 @@ const testimonials = [
     role: "CEO Instituto do Sorriso",
     videoThumbnail: "https://img.youtube.com/vi/1MIjs_OA-Uc/maxresdefault.jpg",
     image: "/Clientes/dr-calebe.jpg",
+    videoId: "1MIjs_OA-Uc",
     quote:
       "Antes a gente só fazia posts prontos, nada personalizado. Com a TegBe, tudo mudou. Eles respeitam nosso jeito, ajudam a contar nossa história de forma verdadeira e estratégica. Foi um divisor de águas para a clínica. Pra mim, é transformação de verdade.",
   },
   {
-    name: "Dr. Calebe",
-    role: "CEO Instituto do Sorriso",
-    videoThumbnail: "https://img.youtube.com/vi/1MIjs_OA-Uc/maxresdefault.jpg",
-    image: "/Clientes/dr-calebe.jpg",
+    name: "Rodrigo",
+    role: "CEO Corretor Online",
+    videoThumbnail: "https://img.youtube.com/vi/twzDdL1UUnY/maxresdefault.jpg",
+    image: "/Clientes/rodrigo.PNG",
+    videoId: "twzDdL1UUnY",
     quote:
-      "Antes a gente só fazia posts prontos, nada personalizado. Com a TegBe, tudo mudou. Eles respeitam nosso jeito, ajudam a contar nossa história de forma verdadeira e estratégica. Foi um divisor de águas para a clínica. Pra mim, é transformação de verdade.",
+      "Sempre que tive dúvida ou precisei de ajuda, a TegBe esteve presente, não só com marketing, mas auxiliando em várias áreas do meu negócio. Eles respeitam nosso jeito e trabalham com sinceridade e coração. Desde que começamos, nossa visibilidade cresceu muito e conquistamos mais clientes. Pra mim, é parceria de verdade, que faz a diferença.",
   }
 ];
 
@@ -60,7 +62,7 @@ export default function Assessments() {
           <SwiperSlide
             key={index}
             className="!flex justify-center items-center">
-            <div className="bg-white rounded-[10px] w-full min-h-[400px] max-w-[500px] flex flex-col justify-between shadow-[5px_5px_20px_rgba(0,0,0,0.25)] overflow-hidden">
+            <div className="bg-white rounded-[10px] w-full sm:h-[620px] min-h-[800px] max-w-[500px] flex flex-col justify-between shadow-[5px_5px_20px_rgba(0,0,0,0.25)] overflow-hidden">
               <div className="flex flex-col justify-between gap-[25px] px-[30px] pt-[40px] pb-[20px]">
                 <div className="flex justify-between items-end h-[67px]">
                   <svg
@@ -83,10 +85,10 @@ export default function Assessments() {
                 </div>
 
                 <div className="relative w-full max-w-[430px] cursor-pointer">
-                    <YoutubePlaceholder videoId="1MIjs_OA-Uc" />
+                    <YoutubePlaceholder videoId={testimonial.videoId} />
                 </div>
 
-                <p className="text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
+                <p className="text-[14px] sm:text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
                   {testimonial.quote}
                 </p>
               </div>
@@ -97,7 +99,7 @@ export default function Assessments() {
                   width={100}
                   height={100}
                   alt={testimonial.name}
-                  className="rounded-full object-cover border-2 border-white"
+                  className="rounded-full object-cover border-2 border-white max-w-[100px] max-h-[100px]"
                 />
                 <div className="flex flex-col items-start gap-1">
                   <span className="text-[1.1em]">{testimonial.name}</span>
