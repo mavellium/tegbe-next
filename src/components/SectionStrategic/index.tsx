@@ -8,6 +8,18 @@ import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 const slides = [
+    {
+    icon: "/cards-carrossel/Icone-card-4.svg",
+    title: "Tráfego Pago",
+    description: "Gestão de anúncios no Google e Meta para atrair clientes",
+    bullets: [
+      "Leve pessoas certas até o seu funil de vendas",
+      "Gere demanda previsível e mensure cada resultado",
+      "Mais controle, mais oportunidades, mais ROI",
+    ],
+    image: "/Imagem-card-4.webp",
+    alt: "ícones de redes sociais",
+  },
   {
     icon: "/cards-carrossel/Icone-card-1.svg",
     title: "Criativos",
@@ -45,18 +57,6 @@ const slides = [
     alt: "estrutura de um site",
   },
   {
-    icon: "/cards-carrossel/Icone-card-4.svg",
-    title: "Tráfego Pago",
-    description: "Gestão de anúncios no Google e Meta para atrair clientes",
-    bullets: [
-      "Leve pessoas certas até o seu funil de vendas",
-      "Gere demanda previsível e mensure cada resultado",
-      "Mais controle, mais oportunidades, mais ROI",
-    ],
-    image: "/Imagem-card-4.webp",
-    alt: "ícones de redes sociais",
-  },
-  {
     icon: "/cards-carrossel/Icone-card-5.svg",
     title: "Dashboards",
     description: "Os principais números do seu negócio na palma da mão",
@@ -68,30 +68,30 @@ const slides = [
     image: "/Imagem-card-5.webp",
     alt: "monitor com dados",
   },
-  {
-    icon: "/cards-carrossel/Icone-card-6.svg",
-    title: "Gestão & Atendimento",
-    description: "Seu marketing gerenciado por especialistas em crescimento",
-    bullets: [
-      "Equipe treinada, monitorada e em evolução constante",
-      "Atendimento rápido, próximo e focado em resultados",
-      "Toda a expertise da TegBe, lado a lado com seu negócio",
-    ],
-    image: "/Imagem-card-6.webp",
-    alt: "colaboradores TegBe",
-  },
-  {
-    icon: "/cards-carrossel/Icone-card-7.svg",
-    title: "Soluções Comerciais",
-    description: "Montamos e otimizamos sua operação de vendas do zero",
-    bullets: [
-      "Treinamos seu time ou fornecemos nossos especialistas",
-      "Estrutura, processos e resultados sob medida",
-      "Mais vendas, menos improviso",
-    ],
-    image: "/Imagem-card-7.webp",
-    alt: "colaboradores TegBe",
-  },
+  // {
+  //   icon: "/cards-carrossel/Icone-card-6.svg",
+  //   title: "Gestão & Atendimento",
+  //   description: "Seu marketing gerenciado por especialistas em crescimento",
+  //   bullets: [
+  //     "Equipe treinada, monitorada e em evolução constante",
+  //     "Atendimento rápido, próximo e focado em resultados",
+  //     "Toda a expertise da TegBe, lado a lado com seu negócio",
+  //   ],
+  //   image: "/Imagem-card-6.webp",
+  //   alt: "colaboradores TegBe",
+  // },
+  // {
+  //   icon: "/cards-carrossel/Icone-card-7.svg",
+  //   title: "Soluções Comerciais",
+  //   description: "Montamos e otimizamos sua operação de vendas do zero",
+  //   bullets: [
+  //     "Treinamos seu time ou fornecemos nossos especialistas",
+  //     "Estrutura, processos e resultados sob medida",
+  //     "Mais vendas, menos improviso",
+  //   ],
+  //   image: "/Imagem-card-7.webp",
+  //   alt: "colaboradores TegBe",
+  // },
   {
     icon: "/cards-carrossel/Icone-card-8.svg",
     title: "Funcionário de IA",

@@ -13,7 +13,7 @@ export default function Section5() {
               height={190}></Image>
           </div>
           <div className="max-w-[700px] w-full">
-            <h2 className="text-[18px] font-bold mb-3 text-center lg:text-start">
+            <h2 className="text-[22px] font-bold mb-3 text-center lg:text-start">
               Consultora Oficial Mercado Livre
             </h2>
             <p className="flex flex-col gap-3 text-[18px] font-medium lgtext-start text-justify">
@@ -41,7 +41,7 @@ export default function Section5() {
               height={190}></Image>
           </div>
           <div className="max-w-[700px] w-full">
-            <h2 className="text-[18px] font-bold mb-3 text-center lg:text-start">
+            <h2 className="text-[22px] font-bold mb-3 text-center lg:text-start">
               Kommo Partner
             </h2>
             <p className="flex flex-col gap-3 text-[18px] font-medium lgtext-start text-justify">
@@ -68,12 +68,16 @@ export default function Section5() {
               height={190}></Image>
           </div>
           <div className="max-w-[700px] w-full">
-            <h2 className="text-[18px] font-bold mb-3 text-center lg:text-start">
+            <h2 className="text-[22px] font-bold mb-3 text-center lg:text-start">
               Amazon Mentor
             </h2>
             <p className="flex flex-col gap-3 text-[18px] font-medium lgtext-start text-justify">
               <span>
-Como Amazon Mentor, a TegBe possui um reconhecimento exclusivo que destaca nosso conhecimento avançado e estratégico dentro da maior plataforma global de comércio eletrônico. Estamos aptos a guiar empresas para um crescimento sustentável e escalável dentro da Amazon.
+                Como Amazon Mentor, a TegBe possui um reconhecimento exclusivo
+                que destaca nosso conhecimento avançado e estratégico dentro da
+                maior plataforma global de comércio eletrônico. Estamos aptos a
+                guiar empresas para um crescimento sustentável e escalável
+                dentro da Amazon.
               </span>
             </p>
           </div>
