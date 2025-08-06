@@ -88,7 +88,7 @@ export default function Assessments() {
                     <YoutubePlaceholder videoId={testimonial.videoId} />
                 </div>
 
-                <p className="text-[14px] sm:text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
+                <p className="md:text-[15px] sm:text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
                   {testimonial.quote}
                 </p>
               </div>
