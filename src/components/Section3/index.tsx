@@ -8,7 +8,7 @@ export default function SectionTextImage() {
   return (
     <section
       id="section-text-image"
-      className="pt-20 px-4 bg-gradient-to-b from-black to-[#0C0014]">
+      className="pt-20 px-4 bg-black py-20">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-[1300px] w-full mx-auto">
         {/* Bloco de vídeo */}
         <figure

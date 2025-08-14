@@ -53,7 +53,7 @@ export default function Section2() {
   return (
     <section
       id="section-2"
-      className="flex flex-col lg:flex-row justify-center items-center w-full bg-black px-6 md:px-10 py-20 gap-10"
+      className="flex flex-col lg:flex-row justify-center items-center w-full bg-gradient-to-b from-black to-[#0C0014] px-6 md:px-10 py-20 gap-10"
     >
       {/* Etapas */}
       <div className="flex flex-col justify-center items-center w-full max-w-2xl text-white space-y-8">

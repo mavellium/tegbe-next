@@ -22,7 +22,7 @@ const testimonials = [
     name: "Rodrigo",
     role: "CEO Corretor Online",
     videoThumbnail: "https://img.youtube.com/vi/twzDdL1UUnY/maxresdefault.jpg",
-    image: "/Clientes/rodrigo.PNG",
+    image: "/Clientes/rodrigo.jpeg",
     videoId: "twzDdL1UUnY",
     quote:
       "Sempre que tive dúvida ou precisei de ajuda, a TegBe esteve presente, não só com marketing, mas auxiliando em várias áreas do meu negócio. Eles respeitam nosso jeito e trabalham com sinceridade e coração. Desde que começamos, nossa visibilidade cresceu muito e conquistamos mais clientes. Pra mim, é parceria de verdade, que faz a diferença.",

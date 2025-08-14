@@ -18,8 +18,8 @@ export default function Home() {
       <Header></Header>
       <main>
         <Section1></Section1>
-        <Section2></Section2>
         <Section3></Section3>
+        <Section2></Section2>
         <Funil></Funil>
         <SectionStrategic></SectionStrategic>
         <Assessments></Assessments>
