@@ -3,41 +3,42 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="bg-[#0C0014] text-[#DEDEDE] py-[50px] border-t-[8px] border-[#E61A4A] text-base">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div className="container flex mx-auto px-5 grid grid-cols-1 md:grid-cols-3 items-center flex-col">
+                {/* Coluna esquerda vazia para balancear o centro */}
+                <div className="hidden md:block" aria-hidden="true" />
 
-                {/* Logo e Direitos */}
-                <div className="flex flex-col items-center">
+                {/* Centro: Logo + direitos (centralizados em relação ao container) */}
+                <div className="flex flex-col justify-self-center items-center text-center">
                     <Image
-                        src="/logotegbe.svg"
-                        alt="Logo Tegbe"
+                        src="/logoTegbe.svg"
+                        alt="Logo TegBe"
                         width={150}
                         height={50}
                         priority
                     />
-                    <p className="text-lg mt-5 font-medium text-center md:text-left">
-                        &copy; 2025 Tegbe. Todos os direitos reservados.
+                    <p className="text-lg mt-5 font-medium">
+                        &copy; 2025 TegPro. Todos os direitos reservados.
                     </p>
                 </div>
 
-                {/* Afiliados no canto direito */}
-                <div className="flex  md:items-end">
-                    <p className="font-semibold text-lg mb-2 items-center flex flex-col">
-                        Powered by{" "}
-                        <a
-                            href="https://mavellium.com.br"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[#229A00] hover:underline"
-                        >
-                            <Image
-                                src="/logo-Mavellium.png"
-                                alt="Logo Mavellium"
-                                width={200}
-                                height={50}
-                                priority
-                            />
-                        </a>
-                    </p>
+                {/* Direita: Afiliados encostados à direita */}
+                <div className="flex flex-col items-center md:justify-self-end mt-8 md:mt-0 text-center md:text-right">
+                    <span className="block font-semibold text-lg mb-2">Powered by</span>
+                    <a
+                        href="https://mavellium.com.br"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                        title="Mavellium"
+                    >
+                        <Image
+                            src="/logo-Mavellium.png"
+                            alt="Logo Mavellium"
+                            width={200}
+                            height={50}
+                            priority
+                        />
+                    </a>
                 </div>
             </div>
 

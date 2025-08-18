@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Assessments() {
   return (
-    <section className="px-8 pb-28 text-center bg-[var(--color-section)]">
+    <section className="px-8 pb-28 text-center bg-[#10071F]">
       <h1 className="flex items-center justify-center text-[#F2D95D] text-[32px] py-[50px] font-bold">
         O que os clientes Tegbe estão dizendo
       </h1>
