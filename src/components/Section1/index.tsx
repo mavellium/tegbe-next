@@ -45,9 +45,9 @@ export default function Section1() {
           </h1>
 
           <div className="text-base sm:text-lg md:text-xl mb-8 px-2 w-full">
-              <p>Chega de Investir em Marketing sem ver Resultados. Somos a{' '}
+            <p>Chega de Investir em Marketing sem ver Resultados. Somos a{' '}
               <span className="font-bold">Agência</span> que</p>
-              <p>foca em <span className="font-bold">Vendas</span>,{' '}
+            <p>foca em <span className="font-bold">Vendas</span>,{' '}
               <span className="font-bold">Estrutura</span> e{' '}
               <span className="font-bold">Escala</span>,{' '}
               <span className="font-bold">Sem Enrolação</span>.</p>
@@ -56,7 +56,7 @@ export default function Section1() {
           <div className="w-full flex justify-center">
             <Link
               href="#section-2"
-              className="flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]"
+              className="ml-4 flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]"
             >
               QUERO MAIS INFORMAÇÕES
             </Link>

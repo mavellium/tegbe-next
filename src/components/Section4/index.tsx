@@ -16,12 +16,19 @@ export default function SectionLoseClient() {
           </p>
         </div>
       </div>
-        <a
-            href="#section-2"
-            className="w-[22em] h-[3em] flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-[#21244D] border-none shadow-[0_4px_12px_rgb(242,217,93)] cursor-pointer transition-all duration-300 whitespace-nowrap bg-gradient-to-r from-[#f2d95d] to-[#EEC35A] hover:from-[#21244D] hover:to-[#22398E] hover:text-white hover:shadow-[0_4px_12px_rgba(230,26,74,0.5)]"
-            >
-            QUERO MAIS INFORMAÇÕES
-        </a>
+      <a
+        href="#section-2"
+        className="w-[22em] h-[3em] flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-[#21244D] border-none
+  shadow-[0_4px_12px_rgb(242,217,93)]
+  cursor-pointer transition-all duration-300 ease-in-out transform whitespace-nowrap
+  bg-gradient-to-r from-[#f2d95d] to-[#EEC35A]
+  hover:from-[#21244D] hover:to-[#22398E] hover:text-white
+  hover:shadow-[0_6px_16px_rgba(230,26,74,0.5)]
+  hover:scale-105 hover:-translate-y-1"
+      >
+        QUERO MAIS INFORMAÇÕES
+      </a>
+
     </section>
   );
 }

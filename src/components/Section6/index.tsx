@@ -72,10 +72,11 @@ export default function SectionLoseClient() {
 
                     <a
                         href="#section-2"
-                        className="z-10 inline-flex items-center justify-center px-6 py-3 text-[#20254C] font-bold rounded-[10px] bg-gradient-to-r from-[#f2d95d] to-[#EEC35A] shadow-[0_4px_12px_rgb(242,217,93)] transition-all duration-300 whitespace-nowrap hover:text-white hover:from-[#20254C] hover:to-[#21245f] hover:shadow-[0_4px_12px_rgb(32,37,76)]"
+                        className="z-10 inline-flex items-center justify-center px-6 py-3 text-[#20254C] font-bold rounded-[10px] bg-gradient-to-r from-[#f2d95d] to-[#EEC35A] shadow-[0_4px_12px_rgb(242,217,93)] transition-all duration-300 ease-in-out transform whitespace-nowrap hover:text-white hover:from-[#20254C] hover:to-[#21245f] hover:shadow-[0_6px_16px_rgb(32,37,76)] hover:scale-105 hover:-translate-y-1"
                     >
                         IR PARA O PRÓXIMO NÍVEL
                     </a>
+
                 </div>
             </div>
         </section>

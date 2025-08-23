@@ -8,7 +8,7 @@ import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 const slides = [
-    {
+  {
     icon: "/cards-carrossel/Icone-card-4.svg",
     title: "Tráfego Pago",
     description: "Gestão de anúncios no Google e Meta para atrair clientes",
@@ -217,9 +217,11 @@ export default function SectionStrategic() {
 
       <a
         href="#section-2"
-        className="flex items-center justify-center py-3 px-6 rounded-[10px] text-[#F0F0F0] font-semibold text-[18px] border-none bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] shadow-lg shadow-[#e61a4a80] transition-all duration-300 uppercase w-full max-w-[400px] mx-auto hover:text-[#20254C] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:shadow-[0_4px_12px_rgb(242,217,93)]">
+        className="flex items-center justify-center py-3 px-6 rounded-[10px] text-[#F0F0F0] font-semibold text-[18px] border-none bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] shadow-lg shadow-[#e61a4a80] transition-all duration-300 ease-in-out transform uppercase w-full max-w-[400px] mx-auto hover:text-[#20254C] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:shadow-[0_6px_16px_rgb(242,217,93)] hover:scale-105 hover:-translate-y-1"
+      >
         Impulsionar meu marketing
       </a>
+
     </section>
   );
 }

@@ -8,32 +8,46 @@ export default function SectionTextImage() {
   return (
     <section
       id="section-text-image"
-      className="pt-20 px-4 bg-black py-20">
+      className="pt-20 px-4 bg-black py-20"
+    >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-[1300px] w-full mx-auto">
         {/* Bloco de vídeo */}
         <figure
-          className="w-full max-w-[644px] aspect-video flex items-center justify-center rounded-[10px] overflow-hidden bg-black relative group cursor-pointer"
-          onClick={() => setShowVideo(true)}>
+          className="w-full max-w-[700px] aspect-video flex items-center justify-center rounded-2xl overflow-hidden bg-black relative group cursor-pointer border border-[#EEC35A]/60 shadow-[0_4px_12px_rgba(238,195,90,0.25)] hover:shadow-[0_8px_20px_rgba(238,195,90,0.45)] transition-all duration-300"
+          onClick={() => setShowVideo(true)}
+        >
           {showVideo ? (
             <iframe
-              className="w-full h-full"
-              width="882"
-              height="496"
+              className="w-full h-full rounded-2xl"
               src="https://www.youtube.com/embed/Z_RAN9BaWZc?autoplay=1"
               title="Tegbe - Conheça nossas soluções!"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              loading="lazy"></iframe>
+              loading="lazy"
+            ></iframe>
           ) : (
             <>
+              {/* Thumbnail */}
               <img
-                src="https://img.youtube.com/vi/Z_RAN9BaWZc/hqdefault.jpg"
+                src="https://img.youtube.com/vi/Z_RAN9BaWZc/maxresdefault.jpg"
                 alt="Preview do vídeo Tegbe"
-                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                className="w-full h-full object-cover brightness-90 saturate-125 transition-all duration-300 group-hover:scale-[1.02] group-hover:brightness-100 group-hover:saturate-150"
               />
+              {/* Botão Play customizado */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute top-1/2 left-1/2 w-[48px] h-[48px] -translate-x-1/2 -translate-y-1/2 bg-[url('https://cdn-icons-png.flaticon.com/512/727/727245.png')] bg-no-repeat bg-center bg-contain pointer-events-none" />
+                <div className="w-20 h-20 bg-[#EEC35A]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#EEC35A] shadow-[0_0_20px_rgba(238,195,90,0.6)] group-hover:shadow-[0_0_30px_rgba(238,195,90,0.8)]">
+                  <div
+                    className="ml-1"
+                    style={{
+                      width: 0,
+                      height: 0,
+                      borderTop: "18px solid transparent",
+                      borderBottom: "18px solid transparent",
+                      borderLeft: "28px solid white",
+                    }}
+                  />
+                </div>
               </div>
             </>
           )}

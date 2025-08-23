@@ -6,13 +6,39 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Image from "next/image";
-import YoutubePlaceholder from "../YoutubePlaceholder";
+
+function YoutubePlaceholder({ videoId }: { videoId: string }) {
+  return (
+    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-[#CA1A41]/40 shadow-[0_2px_10px_rgba(202,26,65,0.2)] group cursor-pointer">
+      {/* Thumbnail */}
+      <img
+        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+        alt="Vídeo do cliente"
+        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:brightness-110"
+      />
+      {/* Botão Play */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-16 h-16 bg-[#CA1A41]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#CA1A41] shadow-[0_0_15px_rgba(202,26,65,0.5)] group-hover:shadow-[0_0_25px_rgba(202,26,65,0.7)]">
+          <div
+            className="ml-1"
+            style={{
+              width: 0,
+              height: 0,
+              borderTop: "12px solid transparent",
+              borderBottom: "12px solid transparent",
+              borderLeft: "20px solid white",
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const testimonials = [
   {
     name: "Dr. Calebe",
     role: "CEO Instituto do Sorriso",
-    videoThumbnail: "https://img.youtube.com/vi/1MIjs_OA-Uc/maxresdefault.jpg",
     image: "/Clientes/dr-calebe.jpg",
     videoId: "1MIjs_OA-Uc",
     quote:
@@ -21,12 +47,11 @@ const testimonials = [
   {
     name: "Rodrigo",
     role: "CEO Corretor Online",
-    videoThumbnail: "https://img.youtube.com/vi/twzDdL1UUnY/maxresdefault.jpg",
     image: "/Clientes/rodrigo.jpeg",
     videoId: "twzDdL1UUnY",
     quote:
       "Sempre que tive dúvida ou precisei de ajuda, a TegBe esteve presente, não só com marketing, mas auxiliando em várias áreas do meu negócio. Eles respeitam nosso jeito e trabalham com sinceridade e coração. Desde que começamos, nossa visibilidade cresceu muito e conquistamos mais clientes. Pra mim, é parceria de verdade, que faz a diferença.",
-  }
+  },
 ];
 
 export default function Assessments() {
@@ -42,26 +67,20 @@ export default function Assessments() {
         loop={true}
         slidesPerView={2}
         spaceBetween={20}
-        pagination={{
-          el: ".swiper-pagination",
-          clickable: true,
-        }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-        }}>
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+        }}
+      >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide
             key={index}
-            className="!flex justify-center items-center">
+            className="!flex justify-center items-center"
+          >
             <div className="bg-white rounded-[10px] w-full sm:h-[620px] min-h-[800px] max-w-[500px] flex flex-col justify-between shadow-[5px_5px_20px_rgba(0,0,0,0.25)] overflow-hidden">
               <div className="flex flex-col justify-between gap-[25px] px-[30px] pt-[40px] pb-[20px]">
                 <div className="flex justify-between items-end h-[67px]">
@@ -83,16 +102,18 @@ export default function Assessments() {
                     height={67}
                   />
                 </div>
-
-                <div className="relative w-full max-w-[430px] cursor-pointer">
-                    <YoutubePlaceholder videoId={testimonial.videoId} />
+                {/* Vídeo com player customizado */}
+                <div className="relative w-full max-w-[430px] mx-auto">
+                  <YoutubePlaceholder videoId={testimonial.videoId} />
                 </div>
 
+                {/* Texto */}
                 <p className="md:text-[15px] sm:text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
                   {testimonial.quote}
                 </p>
               </div>
 
+              {/* Rodapé com nome e cargo */}
               <div className="flex items-center justify-center gap-4 bg-[#CA1A41] text-white p-4">
                 <Image
                   src={testimonial.image}
@@ -112,6 +133,7 @@ export default function Assessments() {
           </SwiperSlide>
         ))}
 
+        {/* Botões de navegação */}
         <div className="swiper-button-prev w-[60px] h-[60px] bg-[#CA1A41] rounded-full shadow-md flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-0 z-10">
           <svg
             width="24"
@@ -119,7 +141,8 @@ export default function Assessments() {
             viewBox="0 0 24 41"
             fill="none"
             className="w-[40px] h-[40px]"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -136,7 +159,8 @@ export default function Assessments() {
             viewBox="0 0 24 41"
             fill="none"
             className="w-[40px] h-[40px]"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               fillRule="evenodd"
               clipRule="evenodd"

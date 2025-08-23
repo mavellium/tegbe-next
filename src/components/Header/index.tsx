@@ -16,9 +16,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-[10000000] w-full h-20 flex items-center border-b-4 border-black transition-colors ${
-        scrolled ? "bg-black" : "bg-[#0b0c11bd]"
-      }`}>
+      className={`fixed top-0 z-[10000000] w-full h-20 flex items-center border-b-4 border-black transition-colors ${scrolled ? "bg-black" : "bg-[#0b0c11bd]"
+        }`}>
       <div className="flex items-center justify-center w-full px-4 md:px-8 lg:px-20 lg:justify-between">
         {/* Logo */}
         <a href="#section-1">
@@ -34,7 +33,8 @@ export default function Header() {
         <nav className="hidden lg:flex">
           <Link
             href="#section-2"
-            className="ml-4 flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]">
+            className="ml-4 flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]"
+          >
             QUERO MAIS INFORMAÇÕES
           </Link>
         </nav>
@@ -64,7 +64,8 @@ export default function Header() {
           <Link
             href="#section-2"
             onClick={() => setMenuOpen(false)}
-            className="flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]">
+            className="flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)] transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1"
+          >
             QUERO MAIS INFORMAÇÕES
           </Link>
         </div>
