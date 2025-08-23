@@ -39,7 +39,7 @@ export default function SectionTextImage() {
               />
               {/* Botão Play customizado */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-[#CA1A41]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#CA1A41] shadow-[0_0_20px_rgba(202,26,65,0.6)] group-hover:shadow-[0_0_30px_rgba(202,26,65,0.8)]">
+                <div className="w-20 h-20 bg-[#EEC35A]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#EEC35A] shadow-[0_0_20px_rgba(202,26,65,0.6)] group-hover:shadow-[0_0_30px_rgba(202,26,65,0.8)]">
                   <div
                     className="ml-1"
                     style={{
