@@ -1,36 +1,52 @@
 "use client";
 
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
 import Image from "next/image";
 
-function YoutubePlaceholder({ videoId }: { videoId: string }) {
+function YoutubePlayer({ videoId }: { videoId: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
-    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-[#CA1A41]/40 shadow-[0_2px_10px_rgba(202,26,65,0.2)] group cursor-pointer">
-      {/* Thumbnail */}
-      <img
-        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-        alt="Vídeo do cliente"
-        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:brightness-110"
-      />
-      {/* Botão Play */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-16 h-16 bg-[#CA1A41]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#CA1A41] shadow-[0_0_15px_rgba(202,26,65,0.5)] group-hover:shadow-[0_0_25px_rgba(202,26,65,0.7)]">
-          <div
-            className="ml-1"
-            style={{
-              width: 0,
-              height: 0,
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderLeft: "20px solid white",
-            }}
+    <div
+      className="relative w-full aspect-video rounded-xl overflow-hidden border border-[#CA1A41]/40 shadow-[0_2px_10px_rgba(202,26,65,0.2)] cursor-pointer"
+      onClick={() => setIsPlaying(true)}
+    >
+      {isPlaying ? (
+        <iframe
+          key={videoId}
+          className="w-full h-full rounded-xl"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+          title="Vídeo do cliente"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      ) : (
+        <>
+          <img
+            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            alt="Vídeo do cliente"
+            className="w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.02] group-hover:brightness-110"
           />
-        </div>
-      </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-16 h-16 bg-[#CA1A41]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#CA1A41] shadow-[0_0_15px_rgba(202,26,65,0.5)] group-hover:shadow-[0_0_25px_rgba(202,26,65,0.7)]">
+              <div
+                className="ml-1"
+                style={{
+                  width: 0,
+                  height: 0,
+                  borderTop: "12px solid transparent",
+                  borderBottom: "12px solid transparent",
+                  borderLeft: "20px solid white",
+                }}
+              />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -102,18 +118,14 @@ export default function Assessments() {
                     height={67}
                   />
                 </div>
-                {/* Vídeo com player customizado */}
-                <div className="relative w-full max-w-[430px] mx-auto">
-                  <YoutubePlaceholder videoId={testimonial.videoId} />
-                </div>
 
-                {/* Texto */}
+                <YoutubePlayer videoId={testimonial.videoId} />
+
                 <p className="md:text-[15px] sm:text-[18px] leading-[30px] text-start italic font-semibold text-[#232222]">
                   {testimonial.quote}
                 </p>
               </div>
 
-              {/* Rodapé com nome e cargo */}
               <div className="flex items-center justify-center gap-4 bg-[#CA1A41] text-white p-4">
                 <Image
                   src={testimonial.image}
@@ -124,16 +136,13 @@ export default function Assessments() {
                 />
                 <div className="flex flex-col items-start gap-1">
                   <span className="text-[1.1em]">{testimonial.name}</span>
-                  <span className="text-[0.9em] opacity-90">
-                    {testimonial.role}
-                  </span>
+                  <span className="text-[0.9em] opacity-90">{testimonial.role}</span>
                 </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
 
-        {/* Botões de navegação */}
         <div className="swiper-button-prev w-[60px] h-[60px] bg-[#CA1A41] rounded-full shadow-md flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-0 z-10">
           <svg
             width="24"
