@@ -33,7 +33,7 @@ marketing <span class="text-[#E61A4A]">sob medida</span>
 };
 
 export default function Home() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(fallbackData); // inicia com fallback
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Home() {
         setData(json.values);
       } catch (error) {
         console.error("Erro no fetch:", error);
-        setData(fallbackData)
+        // mantém fallback
       } finally {
         setLoading(false);
       }
@@ -54,10 +54,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  if (loading) {
-    return <p className="p-4 text-center">Carregando...</p>;
-  }
-
+  // Remove o carregando, sempre mostra conteúdo com o que tem em `data`
   return (
     <>
       <Header />
