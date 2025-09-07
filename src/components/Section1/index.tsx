@@ -1,11 +1,19 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Section1() {
+export default function Section1({
+  title = "",
+  description = "",
+}: {
+  title: string;
+  description: string;
+}) {
   return (
-    <section id="section-1" className="relative w-full h-screen overflow-hidden">
+    <section
+      id="section-1"
+      className="relative w-full h-screen overflow-hidden">
       <div className="video-overlay"></div>
       {/* Vídeo para desktop */}
       <div className="absolute inset-0 z-0">
@@ -16,8 +24,7 @@ export default function Section1() {
           loop
           playsInline
           preload="none"
-          aria-hidden="true"
-        >
+          aria-hidden="true">
           <source src="/bg-section-1-otimizado.webm" type="video/webm" />
         </video>
 
@@ -39,30 +46,23 @@ export default function Section1() {
       {/* Conteúdo sobreposto */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full w-full px-4">
         <div className="flex flex-col items-center justify-center text-center max-w-[1200px]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 max-w-[30em] w-full">
-            Estruture o marketing e as vendas da sua empresa
-            <span>com soluções estratégicas sob medida</span>
-          </h1>
+          <h1
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 max-w-[30em] w-full"
+            dangerouslySetInnerHTML={{ __html: title }}></h1>
 
           <div className="text-base sm:text-lg md:text-xl mb-8 px-2 w-full">
-            <p>Chega de Investir em Marketing sem ver Resultados. Somos a{' '}
-              <span className="font-bold">Agência</span> que</p>
-            <p>foca em <span className="font-bold">Vendas</span>,{' '}
-              <span className="font-bold">Estrutura</span> e{' '}
-              <span className="font-bold">Escala</span>,{' '}
-              <span className="font-bold">Sem Enrolação</span>.</p>
+            <p dangerouslySetInnerHTML={{ __html: description }}></p>
           </div>
 
           <div className="w-full flex justify-center">
             <Link
               href="#section-2"
-              className="ml-4 flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]"
-            >
+              className="ml-4 flex items-center justify-center px-6 py-3 rounded-[10px] font-bold text-white border-none shadow-[0_4px_12px_rgba(230,26,74,0.5)] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 whitespace-nowrap bg-gradient-to-r from-[#E61A4A] to-[#CA1A41] hover:from-[#f2d95d] hover:to-[#EEC35A] hover:text-[#20254C] hover:shadow-[0_4px_12px_rgb(242,217,93)]">
               QUERO MAIS INFORMAÇÕES
             </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

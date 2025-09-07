@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 
-export default function SectionTextImage() {
+export default function SectionTextImage({
+  title = "",
+  description = "",
+}: {
+  title: string;
+  description: string;
+}) {
   const [showVideo, setShowVideo] = useState(false);
 
   const videoId = "Z_RAN9BaWZc";
@@ -20,7 +26,7 @@ export default function SectionTextImage() {
         >
           {showVideo ? (
             <iframe
-              key={videoId} // garante atualização do iframe
+              key={videoId}
               className="w-full h-full rounded-2xl"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
               title="Tegbe - Conheça nossas soluções!"
@@ -31,13 +37,11 @@ export default function SectionTextImage() {
             ></iframe>
           ) : (
             <>
-              {/* Thumbnail */}
               <img
                 src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                 alt="Preview do vídeo Tegbe"
                 className="w-full h-full object-cover brightness-90 saturate-125 transition-all duration-300 group-hover:scale-[1.02] group-hover:brightness-100 group-hover:saturate-150"
               />
-              {/* Botão Play customizado */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-[#EEC35A]/80 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-[#EEC35A] shadow-[0_0_20px_rgba(202,26,65,0.6)] group-hover:shadow-[0_0_30px_rgba(202,26,65,0.8)]">
                   <div
@@ -56,28 +60,10 @@ export default function SectionTextImage() {
           )}
         </figure>
 
-        {/* Texto */}
         <div className="text-[#F0F0F0] max-w-[600px]">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-10 text-center lg:text-left">
-            Por que seu Investimento não traz retorno?
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-10 text-center lg:text-left" dangerouslySetInnerHTML={{ __html: title }}>
           </h2>
-          <p className="text-base md:text-lg leading-[1.8] text-justify">
-            Estudos mostram que muitas pequenas e médias empresas falham no
-            digital — não por falta de investimento, mas por focar em{" "}
-            <span className="font-bold">métricas de vaidade</span> (curtidas,
-            alcance) e negligenciar uma estratégia de{" "}
-            <span className="font-bold">vendas real.</span>
-            <br />
-            <br />
-            <span className="font-bold">
-              Talvez sua empresa esteja nesse grupo.
-            </span>
-            <br />
-            <br />
-            Na <span className="font-bold">TegBe</span>, mudamos esse cenário
-            com estratégia, automação e inteligência comercial para transformar
-            o digital em um canal de
-            <span className="font-bold"> lucro real</span> — e não só de likes.
+          <p className="text-base md:text-lg leading-[1.8] text-justify" dangerouslySetInnerHTML={{ __html: description }}>
           </p>
         </div>
       </div>

@@ -106,19 +106,18 @@ const slides = [
   },
 ];
 
-export default function SectionStrategic() {
+export default function SectionStrategic({
+  title = "",
+  description = "",
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <section className="section-strategic w-full py-24 px-4 lg:px-12 text-center bg-[#10071F] flex flex-col items-center justify-center">
-      <h1 className="text-[24px] sm:text-[32px] font-bold text-gray-100 w-full sm:w-[75%] mx-auto">
-        A Tegbe{" "}
-        <span className="text-[#E61A4A]">transforma a presença digital</span> da
-        sua empresa com{" "}
-        <span className="text-[#E61A4A]">estratégias comerciais</span> e de
-        marketing <span className="text-[#E61A4A]">sob medida</span>
+      <h1 className="text-[24px] sm:text-[32px] font-bold text-gray-100 w-full sm:w-[75%] mx-auto" dangerouslySetInnerHTML={{ __html: title }}>
       </h1>
-      <p className="text-gray-100 text-[20px] font-medium mt-2">
-        Conheça as soluções inteligentes que desenvolvemos para gerar mais
-        vendas e crescimento real para o seu negócio
+      <p className="text-gray-100 text-[20px] font-medium mt-2"  dangerouslySetInnerHTML={{ __html: description }}>
       </p>
 
       <div className="w-full my-16 relative">
