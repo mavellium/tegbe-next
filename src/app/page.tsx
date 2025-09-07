@@ -17,10 +17,7 @@ export default async function Home() {
 
   try {
     const response = await fetch(
-      "https://mavellium-dashboard.vercel.app/api/tegbe",
-      {
-        next: { revalidate: 60 },
-      }
+      "https://mavellium-dashboard.vercel.app/api/tegbe"
     );
 
     if (!response.ok) {
